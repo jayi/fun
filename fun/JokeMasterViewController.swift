@@ -37,6 +37,7 @@ class JokeMasterViewController: UITableViewController {
         self.tableView.mj_header =
             MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: #selector(reload))
         self.tableView.mj_header.beginRefreshing()
+        self.tableView.tableFooterView = UIView.init(frame: CGRectZero);
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -48,12 +49,6 @@ class JokeMasterViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-//    func insertNewObject(sender: AnyObject) {
-//        objects.insert(NSDate(), atIndex: 0)
-//        let indexPath = NSIndexPath(forRow: 0, inSection: 0)
-//        self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
-//    }
 
     // MARK: - Segues
 
@@ -86,8 +81,8 @@ class JokeMasterViewController: UITableViewController {
         cell.textLabel!.text = object["title"].stringValue
         
         var dateString = object["ct"].stringValue
-        dateString = dateString.toDate(DateFormat.Custom("yyyy-MM-DD HH:mm:ss.SSS"))!
-            .toString(DateFormat.Custom("MM-DD HH:mm"))!
+        let date = dateString.toDate(DateFormat.Custom("yyyy-MM-dd HH:mm:ss.SSS"))!
+        dateString = date.toString(DateFormat.Custom("MM-dd HH:mm"))!
         cell.detailTextLabel!.text = dateString
         return cell
     }
@@ -96,15 +91,12 @@ class JokeMasterViewController: UITableViewController {
         // Return false if you do not want the specified item to be editable.
         return false
     }
-
-//    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-//        if editingStyle == .Delete {
-//            objects.removeAtIndex(indexPath.row)
-//            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-//        } else if editingStyle == .Insert {
-//            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-//        }
-//    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
+    
+    // MARK: - Refresh
     
     func reload() {
         self.objects = []
@@ -118,7 +110,6 @@ class JokeMasterViewController: UITableViewController {
                     let json = JSON(value)
                     let array =  json["showapi_res_body"]["contentlist"].arrayValue
                     self.objects = array
-                    print(self.objects.count)
                     self.pageIdx += 1;
                     self.tableView.reloadData()
                     
@@ -137,7 +128,6 @@ class JokeMasterViewController: UITableViewController {
                     let json = JSON(value)
                     let array =  json["showapi_res_body"]["contentlist"].arrayValue
                     self.objects = self.objects + array
-                    print(self.objects.count)
                     self.pageIdx += 1;
                     self.tableView.reloadData()
                     

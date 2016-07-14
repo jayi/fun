@@ -101,6 +101,15 @@
 			name = util;
 			sourceTree = "<group>";
 		};
+		5131AE6E1D37A30300CA4E7B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				51F914E21D2EAECC007656E0 /* JokeMasterViewController.swift */,
+				51F914E41D2EAECC007656E0 /* JokeDetailViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		51F914D41D2EAECC007656E0 = {
 			isa = PBXGroup;
 			children = (
@@ -126,14 +135,13 @@
 		51F914DF1D2EAECC007656E0 /* fun */ = {
 			isa = PBXGroup;
 			children = (
+				5131AE6E1D37A30300CA4E7B /* Controller */,
 				5105BEDD1D36346600015D5B /* util */,
-				51F914E01D2EAECC007656E0 /* AppDelegate.swift */,
-				51F914E21D2EAECC007656E0 /* JokeMasterViewController.swift */,
-				51F914E41D2EAECC007656E0 /* JokeDetailViewController.swift */,
-				51F914E61D2EAECC007656E0 /* Main.storyboard */,
 				51F914E91D2EAECC007656E0 /* Assets.xcassets */,
-				51F914EB1D2EAECC007656E0 /* LaunchScreen.storyboard */,
 				51F914EE1D2EAECC007656E0 /* Info.plist */,
+				51F914E61D2EAECC007656E0 /* Main.storyboard */,
+				51F914EB1D2EAECC007656E0 /* LaunchScreen.storyboard */,
+				51F914E01D2EAECC007656E0 /* AppDelegate.swift */,
 				5131AE6C1D37861500CA4E7B /* Constants.swift */,
 			);
 			path = fun;
