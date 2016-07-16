@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		5105BEDF1D36347B00015D5B /* StringUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5105BEDE1D36347B00015D5B /* StringUtil.swift */; };
+		510EA1961D39CF6300AF65AF /* JokeSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510EA1951D39CF6300AF65AF /* JokeSplitViewController.swift */; };
+		510EA1991D39CF8900AF65AF /* JokeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510EA1971D39CF8900AF65AF /* JokeDetailViewController.swift */; };
+		510EA19A1D39CF8900AF65AF /* JokeMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510EA1981D39CF8900AF65AF /* JokeMasterViewController.swift */; };
 		5131AE6D1D37861500CA4E7B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5131AE6C1D37861500CA4E7B /* Constants.swift */; };
 		51F914E11D2EAECC007656E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F914E01D2EAECC007656E0 /* AppDelegate.swift */; };
-		51F914E31D2EAECC007656E0 /* JokeMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F914E21D2EAECC007656E0 /* JokeMasterViewController.swift */; };
-		51F914E51D2EAECC007656E0 /* JokeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F914E41D2EAECC007656E0 /* JokeDetailViewController.swift */; };
 		51F914E81D2EAECC007656E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51F914E61D2EAECC007656E0 /* Main.storyboard */; };
 		51F914EA1D2EAECC007656E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51F914E91D2EAECC007656E0 /* Assets.xcassets */; };
 		51F914ED1D2EAECC007656E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51F914EB1D2EAECC007656E0 /* LaunchScreen.storyboard */; };
@@ -41,11 +42,12 @@
 		105D3A6E6CB0A4F018D999F9 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2410631BEE622005837EFBAD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		5105BEDE1D36347B00015D5B /* StringUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringUtil.swift; sourceTree = "<group>"; };
+		510EA1951D39CF6300AF65AF /* JokeSplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JokeSplitViewController.swift; path = controller/JokeSplitViewController.swift; sourceTree = "<group>"; };
+		510EA1971D39CF8900AF65AF /* JokeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JokeDetailViewController.swift; path = Controller/JokeDetailViewController.swift; sourceTree = "<group>"; };
+		510EA1981D39CF8900AF65AF /* JokeMasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JokeMasterViewController.swift; path = Controller/JokeMasterViewController.swift; sourceTree = "<group>"; };
 		5131AE6C1D37861500CA4E7B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		51F914DD1D2EAECC007656E0 /* fun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51F914E01D2EAECC007656E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		51F914E21D2EAECC007656E0 /* JokeMasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeMasterViewController.swift; sourceTree = "<group>"; };
-		51F914E41D2EAECC007656E0 /* JokeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeDetailViewController.swift; sourceTree = "<group>"; };
 		51F914E71D2EAECC007656E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		51F914E91D2EAECC007656E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		51F914EC1D2EAECC007656E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -104,8 +106,9 @@
 		5131AE6E1D37A30300CA4E7B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				51F914E21D2EAECC007656E0 /* JokeMasterViewController.swift */,
-				51F914E41D2EAECC007656E0 /* JokeDetailViewController.swift */,
+				510EA1971D39CF8900AF65AF /* JokeDetailViewController.swift */,
+				510EA1981D39CF8900AF65AF /* JokeMasterViewController.swift */,
+				510EA1951D39CF6300AF65AF /* JokeSplitViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -359,10 +362,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				510EA1961D39CF6300AF65AF /* JokeSplitViewController.swift in Sources */,
+				510EA1991D39CF8900AF65AF /* JokeDetailViewController.swift in Sources */,
 				5131AE6D1D37861500CA4E7B /* Constants.swift in Sources */,
+				510EA19A1D39CF8900AF65AF /* JokeMasterViewController.swift in Sources */,
 				5105BEDF1D36347B00015D5B /* StringUtil.swift in Sources */,
-				51F914E51D2EAECC007656E0 /* JokeDetailViewController.swift in Sources */,
-				51F914E31D2EAECC007656E0 /* JokeMasterViewController.swift in Sources */,
 				51F914E11D2EAECC007656E0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -32,7 +32,7 @@ class JokeMasterViewController: UITableViewController {
         }
         
         self.tableView.mj_footer =
-            MJRefreshBackNormalFooter(refreshingTarget: self,
+            MJRefreshAutoNormalFooter(refreshingTarget: self,
                                 refreshingAction: #selector(loadMore))
         self.tableView.mj_header =
             MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: #selector(reload))
