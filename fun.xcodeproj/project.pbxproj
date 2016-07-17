@@ -8,14 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		5105BEDF1D36347B00015D5B /* StringUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5105BEDE1D36347B00015D5B /* StringUtil.swift */; };
-		510EA1961D39CF6300AF65AF /* JokeSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510EA1951D39CF6300AF65AF /* JokeSplitViewController.swift */; };
 		510EA1991D39CF8900AF65AF /* JokeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510EA1971D39CF8900AF65AF /* JokeDetailViewController.swift */; };
 		510EA19A1D39CF8900AF65AF /* JokeMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510EA1981D39CF8900AF65AF /* JokeMasterViewController.swift */; };
+		512EC76A1D3BC97C00EE8426 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 512EC7681D3BC97C00EE8426 /* Main.storyboard */; };
+		512EC76C1D3BE09500EE8426 /* ImageJokeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512EC76B1D3BE09500EE8426 /* ImageJokeTableViewController.swift */; };
+		512EC76E1D3BE28200EE8426 /* JokePicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512EC76D1D3BE28200EE8426 /* JokePicCell.swift */; };
 		5131AE6D1D37861500CA4E7B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5131AE6C1D37861500CA4E7B /* Constants.swift */; };
+		5189CBFF1D39FE2D00313879 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5189CBFE1D39FE2D00313879 /* HomeTableViewController.swift */; };
 		51F914E11D2EAECC007656E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F914E01D2EAECC007656E0 /* AppDelegate.swift */; };
-		51F914E81D2EAECC007656E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51F914E61D2EAECC007656E0 /* Main.storyboard */; };
 		51F914EA1D2EAECC007656E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51F914E91D2EAECC007656E0 /* Assets.xcassets */; };
-		51F914ED1D2EAECC007656E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51F914EB1D2EAECC007656E0 /* LaunchScreen.storyboard */; };
 		51F914F81D2EAECC007656E0 /* funTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F914F71D2EAECC007656E0 /* funTests.swift */; };
 		51F915031D2EAECC007656E0 /* funUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F915021D2EAECC007656E0 /* funUITests.swift */; };
 		86F4487D373E8A24460C717E /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 105D3A6E6CB0A4F018D999F9 /* Pods.framework */; };
@@ -42,15 +43,16 @@
 		105D3A6E6CB0A4F018D999F9 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2410631BEE622005837EFBAD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		5105BEDE1D36347B00015D5B /* StringUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringUtil.swift; sourceTree = "<group>"; };
-		510EA1951D39CF6300AF65AF /* JokeSplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JokeSplitViewController.swift; path = controller/JokeSplitViewController.swift; sourceTree = "<group>"; };
 		510EA1971D39CF8900AF65AF /* JokeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JokeDetailViewController.swift; path = Controller/JokeDetailViewController.swift; sourceTree = "<group>"; };
 		510EA1981D39CF8900AF65AF /* JokeMasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JokeMasterViewController.swift; path = Controller/JokeMasterViewController.swift; sourceTree = "<group>"; };
+		512EC7691D3BC97C00EE8426 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		512EC76B1D3BE09500EE8426 /* ImageJokeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageJokeTableViewController.swift; path = Controller/ImageJokeTableViewController.swift; sourceTree = "<group>"; };
+		512EC76D1D3BE28200EE8426 /* JokePicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JokePicCell.swift; path = Controller/JokePicCell.swift; sourceTree = "<group>"; };
 		5131AE6C1D37861500CA4E7B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5189CBFE1D39FE2D00313879 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeTableViewController.swift; path = Controller/HomeTableViewController.swift; sourceTree = "<group>"; };
 		51F914DD1D2EAECC007656E0 /* fun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51F914E01D2EAECC007656E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		51F914E71D2EAECC007656E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		51F914E91D2EAECC007656E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		51F914EC1D2EAECC007656E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		51F914EE1D2EAECC007656E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51F914F31D2EAECC007656E0 /* funTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = funTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		51F914F71D2EAECC007656E0 /* funTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = funTests.swift; sourceTree = "<group>"; };
@@ -108,7 +110,9 @@
 			children = (
 				510EA1971D39CF8900AF65AF /* JokeDetailViewController.swift */,
 				510EA1981D39CF8900AF65AF /* JokeMasterViewController.swift */,
-				510EA1951D39CF6300AF65AF /* JokeSplitViewController.swift */,
+				5189CBFE1D39FE2D00313879 /* HomeTableViewController.swift */,
+				512EC76B1D3BE09500EE8426 /* ImageJokeTableViewController.swift */,
+				512EC76D1D3BE28200EE8426 /* JokePicCell.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -142,8 +146,7 @@
 				5105BEDD1D36346600015D5B /* util */,
 				51F914E91D2EAECC007656E0 /* Assets.xcassets */,
 				51F914EE1D2EAECC007656E0 /* Info.plist */,
-				51F914E61D2EAECC007656E0 /* Main.storyboard */,
-				51F914EB1D2EAECC007656E0 /* LaunchScreen.storyboard */,
+				512EC7681D3BC97C00EE8426 /* Main.storyboard */,
 				51F914E01D2EAECC007656E0 /* AppDelegate.swift */,
 				5131AE6C1D37861500CA4E7B /* Constants.swift */,
 			);
@@ -287,9 +290,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51F914ED1D2EAECC007656E0 /* LaunchScreen.storyboard in Resources */,
+				512EC76A1D3BC97C00EE8426 /* Main.storyboard in Resources */,
 				51F914EA1D2EAECC007656E0 /* Assets.xcassets in Resources */,
-				51F914E81D2EAECC007656E0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,12 +364,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				510EA1961D39CF6300AF65AF /* JokeSplitViewController.swift in Sources */,
 				510EA1991D39CF8900AF65AF /* JokeDetailViewController.swift in Sources */,
+				512EC76E1D3BE28200EE8426 /* JokePicCell.swift in Sources */,
 				5131AE6D1D37861500CA4E7B /* Constants.swift in Sources */,
 				510EA19A1D39CF8900AF65AF /* JokeMasterViewController.swift in Sources */,
+				5189CBFF1D39FE2D00313879 /* HomeTableViewController.swift in Sources */,
 				5105BEDF1D36347B00015D5B /* StringUtil.swift in Sources */,
 				51F914E11D2EAECC007656E0 /* AppDelegate.swift in Sources */,
+				512EC76C1D3BE09500EE8426 /* ImageJokeTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,20 +407,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		51F914E61D2EAECC007656E0 /* Main.storyboard */ = {
+		512EC7681D3BC97C00EE8426 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				51F914E71D2EAECC007656E0 /* Base */,
+				512EC7691D3BC97C00EE8426 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		51F914EB1D2EAECC007656E0 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				51F914EC1D2EAECC007656E0 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -512,6 +508,7 @@
 			baseConfigurationReference = 2410631BEE622005837EFBAD /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = fun/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.demo.fun;
@@ -526,6 +523,7 @@
 			baseConfigurationReference = 79BE459132416FC393ED5463 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = fun/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.demo.fun;

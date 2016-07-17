@@ -5,5 +5,6 @@ use_frameworks!
 pod 'Alamofire', '~> 3.4'
 pod 'MJRefresh'
 pod 'SwiftyJSON'
-pod "SwiftDate"
-
+pod 'SwiftDate'
+pod 'SnapKit'
+pod 'YYWebImage'

@@ -1,19 +1,33 @@
 PODS:
   - Alamofire (3.4.0)
   - MJRefresh (3.1.0)
+  - SnapKit (0.21.0)
   - SwiftDate (3.0.8)
   - SwiftyJSON (2.3.2)
+  - YYCache (1.0.3)
+  - YYImage (1.0.1):
+    - YYImage/Core (= 1.0.1)
+  - YYImage/Core (1.0.1)
+  - YYWebImage (1.0.3):
+    - YYCache
+    - YYImage
 
 DEPENDENCIES:
   - Alamofire (~> 3.4)
   - MJRefresh
+  - SnapKit
   - SwiftDate
   - SwiftyJSON
+  - YYWebImage
 
 SPEC CHECKSUMS:
   Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
   MJRefresh: 743e6404967d1c2c688472ea3ecfde247d872db4
+  SnapKit: 2756fe24b706367af224c9c508d2f9166d03354c
   SwiftDate: 971f8b9394f664f2226b9c3ab64e801a7291c612
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+  YYCache: 282f35b5b0990833d0b7a06d864a87141a021da2
+  YYImage: b41b45bc5f32bfcdf67bdfb9c09da9e9832357c0
+  YYWebImage: 8da75a611fd0d2e0f58a273f9ca0bc731614cb0d
 
 COCOAPODS: 0.39.0
