@@ -15,7 +15,7 @@ class JokePicCell: UITableViewCell {
     
     let titleLabel = UILabel()
     let dateLable = UILabel()
-    let picImageView = UIImageView()
+    let picImageView = YYAnimatedImageView()
     
     var jokePicItem: JSON? {
         didSet {
