@@ -35,9 +35,6 @@ class JokeMasterViewController: UITableViewController {
             self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? JokeDetailViewController
         }
         
-        self.tableView.mj_footer =
-            MJRefreshAutoNormalFooter(refreshingTarget: self,
-                                refreshingAction: #selector(loadMore))
         self.tableView.mj_header =
             MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: #selector(reload))
         self.tableView.mj_header.beginRefreshing()
@@ -110,6 +107,9 @@ class JokeMasterViewController: UITableViewController {
                     self.tableView.reloadData()
                     
                     self.tableView.mj_header.endRefreshing()
+                    self.tableView.mj_footer =
+                        MJRefreshAutoNormalFooter(refreshingTarget: self,
+                            refreshingAction: #selector(self.loadMore))
                 }
         }
     }

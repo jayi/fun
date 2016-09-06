@@ -24,10 +24,6 @@ class ImageJokeTableViewController: UITableViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view, typically from a nib.
-        
-        self.tableView.mj_footer =
-            MJRefreshAutoNormalFooter(refreshingTarget: self,
-                                refreshingAction: #selector(loadMore))
         self.tableView.mj_header =
             MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: #selector(reload))
         self.tableView.mj_header.beginRefreshing()
@@ -36,7 +32,7 @@ class ImageJokeTableViewController: UITableViewController {
         self.tableView.tableFooterView = UIView.init(frame: CGRectZero);
         self.tableView.registerClass(JokePicCell.self, forCellReuseIdentifier: "Cell")
         self.tableView.allowsSelection = false
-        self.tableView.rowHeight = 200
+        self.tableView.rowHeight = 400
         
         self.title = "图文笑话"
         self.view.backgroundColor = UIColor.whiteColor()
@@ -62,10 +58,10 @@ class ImageJokeTableViewController: UITableViewController {
         let object = objects[indexPath.row]
         cell.textLabel!.text = object["title"].stringValue
         
-//        var dateString = object["ct"].stringValue
-//        let date = dateString.toDate(DateFormat.Custom("yyyy-MM-dd HH:mm:ss.SSS"))!
-//        dateString = date.toString(DateFormat.Custom("MM-dd HH:mm"))!
-//        cell.detailTextLabel!.text = dateString
+        var dateString = object["ct"].stringValue
+        let date = dateString.toDate(DateFormat.Custom("yyyy-MM-dd HH:mm:ss.SSS"))!
+        dateString = date.toString(DateFormat.Custom("MM-dd HH:mm"))!
+        cell.dateLabel.text = dateString
         
         cell.jokePicItem = object
         
@@ -90,6 +86,10 @@ class ImageJokeTableViewController: UITableViewController {
                     self.tableView.reloadData()
                     
                     self.tableView.mj_header.endRefreshing()
+                    
+                    self.tableView.mj_footer =
+                        MJRefreshAutoNormalFooter(refreshingTarget: self,
+                            refreshingAction: #selector(self.loadMore))
                 }
         }
     }

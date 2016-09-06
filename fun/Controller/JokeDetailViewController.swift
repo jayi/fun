@@ -56,6 +56,7 @@ class JokeDetailViewController: UIViewController {
         scrollView.snp_makeConstraints { (make) in
             make.edges.equalTo(superview)
         }
+        scrollView.alwaysBounceVertical = true
     }
 
     override func viewDidLoad() {

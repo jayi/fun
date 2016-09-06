@@ -14,7 +14,7 @@
 		512EC76C1D3BE09500EE8426 /* ImageJokeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512EC76B1D3BE09500EE8426 /* ImageJokeTableViewController.swift */; };
 		512EC76E1D3BE28200EE8426 /* JokePicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512EC76D1D3BE28200EE8426 /* JokePicCell.swift */; };
 		5131AE6D1D37861500CA4E7B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5131AE6C1D37861500CA4E7B /* Constants.swift */; };
-		5189CBFF1D39FE2D00313879 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5189CBFE1D39FE2D00313879 /* HomeTableViewController.swift */; };
+		51D54C361D7A68A10093CFFA /* JokeMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D54C351D7A68A10093CFFA /* JokeMainViewController.swift */; };
 		51F914E11D2EAECC007656E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F914E01D2EAECC007656E0 /* AppDelegate.swift */; };
 		51F914EA1D2EAECC007656E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51F914E91D2EAECC007656E0 /* Assets.xcassets */; };
 		51F914F81D2EAECC007656E0 /* funTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F914F71D2EAECC007656E0 /* funTests.swift */; };
@@ -49,7 +49,7 @@
 		512EC76B1D3BE09500EE8426 /* ImageJokeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageJokeTableViewController.swift; path = Controller/ImageJokeTableViewController.swift; sourceTree = "<group>"; };
 		512EC76D1D3BE28200EE8426 /* JokePicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JokePicCell.swift; path = Controller/JokePicCell.swift; sourceTree = "<group>"; };
 		5131AE6C1D37861500CA4E7B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		5189CBFE1D39FE2D00313879 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeTableViewController.swift; path = Controller/HomeTableViewController.swift; sourceTree = "<group>"; };
+		51D54C351D7A68A10093CFFA /* JokeMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JokeMainViewController.swift; path = Controller/JokeMainViewController.swift; sourceTree = "<group>"; };
 		51F914DD1D2EAECC007656E0 /* fun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51F914E01D2EAECC007656E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51F914E91D2EAECC007656E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -110,9 +110,9 @@
 			children = (
 				510EA1971D39CF8900AF65AF /* JokeDetailViewController.swift */,
 				510EA1981D39CF8900AF65AF /* JokeMasterViewController.swift */,
-				5189CBFE1D39FE2D00313879 /* HomeTableViewController.swift */,
 				512EC76B1D3BE09500EE8426 /* ImageJokeTableViewController.swift */,
 				512EC76D1D3BE28200EE8426 /* JokePicCell.swift */,
+				51D54C351D7A68A10093CFFA /* JokeMainViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -368,8 +368,8 @@
 				512EC76E1D3BE28200EE8426 /* JokePicCell.swift in Sources */,
 				5131AE6D1D37861500CA4E7B /* Constants.swift in Sources */,
 				510EA19A1D39CF8900AF65AF /* JokeMasterViewController.swift in Sources */,
-				5189CBFF1D39FE2D00313879 /* HomeTableViewController.swift in Sources */,
 				5105BEDF1D36347B00015D5B /* StringUtil.swift in Sources */,
+				51D54C361D7A68A10093CFFA /* JokeMainViewController.swift in Sources */,
 				51F914E11D2EAECC007656E0 /* AppDelegate.swift in Sources */,
 				512EC76C1D3BE09500EE8426 /* ImageJokeTableViewController.swift in Sources */,
 			);

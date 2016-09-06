@@ -13,7 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     let rootNavigationController = UINavigationController()
-    let rootViewController = HomeTableViewController()
+    let rootViewController = JokeMainViewController()
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
