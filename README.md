@@ -9,4 +9,4 @@
 * 网络请求使用的库是 Alamofire
 * 刷新控件使用 MJRefresh
 * 界面都为纯代码实现，使用 SnapKit(Masonry 的 Swift 版) 简化 Autolayout 代码
-* 使用 YYWebImage(类似 SDWebImage, 功能更强大), 做图片解码和缓存
+* 使用 YYWebImage(类似 SDWebImage, 功能更强大), 做图片解码和缓存，支持 Gif 和 Webp 动图
