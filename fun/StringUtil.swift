@@ -8,15 +8,15 @@
 
 import Foundation
 
-public func filterHtml(html : String) -> String {
+public func filterHtml(_ html : String) -> String {
     var text = html
-    let scanner = NSScanner(string:text)
-    while !scanner.atEnd {
-        scanner.scanUpToString("<", intoString: nil)
+    let scanner = Scanner(string:text)
+    while !scanner.isAtEnd {
+        scanner.scanUpTo("<", into: nil)
         var tag : NSString?
-        scanner.scanUpToString(">", intoString: &tag)
+        scanner.scanUpTo(">", into: &tag)
         if tag != nil {
-            text = text.stringByReplacingOccurrencesOfString(String(tag!) + ">", withString: "")
+            text = text.replacingOccurrences(of: String(tag!) + ">", with: "")
         }
     }
     return text

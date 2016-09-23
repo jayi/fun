@@ -28,39 +28,39 @@ class ImageJokeTableViewController: UITableViewController {
             MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: #selector(reload))
         self.tableView.mj_header.beginRefreshing()
         
-        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
-        self.tableView.tableFooterView = UIView.init(frame: CGRectZero);
-        self.tableView.registerClass(JokePicCell.self, forCellReuseIdentifier: "Cell")
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.singleLine
+        self.tableView.tableFooterView = UIView.init(frame: CGRect.zero);
+        self.tableView.register(JokePicCell.self, forCellReuseIdentifier: "Cell")
         self.tableView.allowsSelection = false
         self.tableView.rowHeight = 400
         
         self.title = "图文笑话"
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         
     }
     
     // MARK: - Table View
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return objects.count
     }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! JokePicCell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! JokePicCell
         
         // TODO: customize UITableViewCell
 //        let cell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: "Cell")
 
-        let object = objects[indexPath.row]
+        let object = objects[(indexPath as NSIndexPath).row]
         cell.textLabel!.text = object["title"].stringValue
         
         var dateString = object["ct"].stringValue
-        let date = dateString.toDate(DateFormat.Custom("yyyy-MM-dd HH:mm:ss.SSS"))!
-        dateString = date.toString(DateFormat.Custom("MM-dd HH:mm"))!
+        let date = dateString.toDate(format: DateFormat.custom("yyyy-MM-dd HH:mm:ss.SSS"))!
+        dateString = date.toString(format: DateFormat.custom("MM-dd HH:mm"))!
         cell.dateLabel.text = dateString
         
         cell.jokePicItem = object
@@ -73,9 +73,8 @@ class ImageJokeTableViewController: UITableViewController {
     func reload() {
         self.objects = []
         pageIdx = 1
-        request(.GET,
-            jokeApiUrl,
-            parameters: [ "page" : String(pageIdx) ],
+        Alamofire.request(jokeApiUrl,
+                          parameters: [ "page" : String(pageIdx) ],
             headers: [ "apikey" : BAIDU_API_KEY])
             .responseJSON { response in
                 if let value = response.result.value {
@@ -95,8 +94,7 @@ class ImageJokeTableViewController: UITableViewController {
     }
 
     func loadMore() {
-        request(.GET,
-            jokeApiUrl,
+        Alamofire.request(jokeApiUrl,
             parameters: [ "page" : String(pageIdx) ],
             headers: [ "apikey" : BAIDU_API_KEY])
             .responseJSON { response in

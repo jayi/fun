@@ -20,14 +20,14 @@ class JokeMainViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         // 延长2秒, 显示开屏页
-        NSThread.sleepForTimeInterval(2.0)
+        Thread.sleep(forTimeInterval: 2.0)
         
         initSegmentedControl()
         setSegmentView()
     }
 
-    override func viewWillAppear(animated: Bool) {
-        self.navigationController!.navigationBar.translucent = false;
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController!.navigationBar.isTranslucent = false;
     }
     
     override func didReceiveMemoryWarning() {
@@ -38,27 +38,27 @@ class JokeMainViewController: UIViewController {
     func initSegmentedControl() {
         segmentedControl.addTarget(self,
                                    action: #selector(segmentedControlChanged(_:)),
-                                   forControlEvents: UIControlEvents.ValueChanged)
+                                   for: UIControlEvents.valueChanged)
         segmentedControl.selectedSegmentIndex = 0
         self.navigationItem.titleView = segmentedControl
     }
     
-    func segmentedControlChanged(segmentedControl: UISegmentedControl) {
+    func segmentedControlChanged(_ segmentedControl: UISegmentedControl) {
         setSegmentView()
     }
     
     func setSegmentView() {
         let viewController = viewControllerForSegmentIndex(segmentedControl.selectedSegmentIndex)
         let superview = self.view
-        superview.addSubview(viewController.view)
+        superview?.addSubview(viewController.view)
         self.addChildViewController(viewController)
-        viewController.view.snp_makeConstraints { (make) in
-            make.edges.equalTo(superview)
+        viewController.view.snp.makeConstraints { (make) in
+            make.edges.equalTo(superview!)
         }
         self.title = viewController.title
     }
     
-    func viewControllerForSegmentIndex(index: Int) -> UIViewController {
+    func viewControllerForSegmentIndex(_ index: Int) -> UIViewController {
         if (index == 0) {
             return textJokeController
         } else {

@@ -39,12 +39,12 @@ class JokeMasterViewController: UITableViewController {
             MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: #selector(reload))
         self.tableView.mj_header.beginRefreshing()
         
-        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
-        self.tableView.tableFooterView = UIView.init(frame: CGRectZero);
-        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.singleLine
+        self.tableView.tableFooterView = UIView.init(frame: CGRect.zero);
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         
         self.title = "文本笑话"
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
     }
 
     override func didReceiveMemoryWarning() {
@@ -54,34 +54,34 @@ class JokeMasterViewController: UITableViewController {
 
     // MARK: - Table View
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return objects.count
     }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 //        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
         
         // TODO: customize UITableViewCell
-        let cell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: "Cell")
+        let cell = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: "Cell")
 
-        let object = objects[indexPath.row]
+        let object = objects[(indexPath as NSIndexPath).row]
         cell.textLabel!.text = object["title"].stringValue
         
         var dateString = object["ct"].stringValue
-        let date = dateString.toDate(DateFormat.Custom("yyyy-MM-dd HH:mm:ss.SSS"))!
-        dateString = date.toString(DateFormat.Custom("MM-dd HH:mm"))!
+        let date = dateString.toDate(format: DateFormat.custom("yyyy-MM-dd HH:mm:ss.SSS"))!
+        dateString = date.toString(format: DateFormat.custom("MM-dd HH:mm"))!
         cell.detailTextLabel!.text = dateString
         return cell
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         
-        let object = objects[indexPath.row]
+        let object = objects[(indexPath as NSIndexPath).row]
         let controller = JokeDetailViewController()
         controller.detailItem = object
         self.navigationController?.pushViewController(controller, animated: true)
@@ -94,8 +94,7 @@ class JokeMasterViewController: UITableViewController {
     func reload() {
         self.objects = []
         pageIdx = 1
-        request(.GET,
-            jokeApiUrl,
+        Alamofire.request(jokeApiUrl,
             parameters: [ "page" : String(pageIdx) ],
             headers: [ "apikey" : BAIDU_API_KEY])
             .responseJSON { response in
@@ -115,8 +114,7 @@ class JokeMasterViewController: UITableViewController {
     }
 
     func loadMore() {
-        request(.GET,
-            jokeApiUrl,
+        Alamofire.request(jokeApiUrl,
             parameters: [ "page" : String(pageIdx) ],
             headers: [ "apikey" : BAIDU_API_KEY])
             .responseJSON { response in

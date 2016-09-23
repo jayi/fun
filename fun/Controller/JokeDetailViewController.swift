@@ -30,7 +30,7 @@ class JokeDetailViewController: UIViewController {
         if let detail = self.detailItem {
             let label = self.detailDescriptionLabel
             label.numberOfLines = 0
-            label.font = UIFont.systemFontOfSize(18)
+            label.font = UIFont.systemFont(ofSize: 18)
             var text = detail["text"].stringValue
             text = filterHtml(text)
             label.text = text
@@ -39,21 +39,21 @@ class JokeDetailViewController: UIViewController {
         
         var superview = contentView
         superview.addSubview(detailDescriptionLabel)
-        detailDescriptionLabel.snp_makeConstraints { (make) in
+        detailDescriptionLabel.snp.makeConstraints { (make) in
             make.edges.equalTo(superview).inset(UIEdgeInsetsMake(8, 8, 8, 8))
         }
         
         superview = scrollView
         superview.addSubview(contentView)
-        contentView.snp_makeConstraints { (make) in
+        contentView.snp.makeConstraints { (make) in
             make.edges.equalTo(superview)
             make.centerX.equalTo(superview)
         }
         
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         superview = self.view
         superview.addSubview(scrollView)
-        scrollView.snp_makeConstraints { (make) in
+        scrollView.snp.makeConstraints { (make) in
             make.edges.equalTo(superview)
         }
         scrollView.alwaysBounceVertical = true

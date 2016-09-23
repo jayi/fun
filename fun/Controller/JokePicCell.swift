@@ -22,14 +22,14 @@ class JokePicCell: UITableViewCell {
         didSet {
             let json = jokePicItem
             var url = json!["img"].stringValue
-            url = url.stringByReplacingOccurrencesOfString("\"/></p>", withString: "")
-            picImageView.yy_imageURL = NSURL(string: url)
+            url = url.replacingOccurrences(of: "\"/></p>", with: "")
+            picImageView.yy_imageURL = URL(string: url)
             
             titleLabel.text = json!["title"].stringValue
             
             var dateString = json!["ct"].stringValue
-            let date = dateString.toDate(DateFormat.Custom("yyyy-MM-dd HH:mm:ss.SSS"))!
-            dateString = date.toString(DateFormat.Custom("MM-dd HH:mm"))!
+            let date = dateString.toDate(format: DateFormat.custom("yyyy-MM-dd HH:mm:ss.SSS"))!
+            dateString = date.toString(format: DateFormat.custom("MM-dd HH:mm"))!
             dateLabel.text = dateString
         }
     }
@@ -39,7 +39,7 @@ class JokePicCell: UITableViewCell {
         // Initialization code
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
@@ -56,35 +56,35 @@ class JokePicCell: UITableViewCell {
         
         titleLabel.numberOfLines = 0
         titleLabel.setContentHuggingPriority(UILayoutPriorityRequired,
-                                               forAxis: UILayoutConstraintAxis.Vertical)
+                                               for: UILayoutConstraintAxis.vertical)
         superview.addSubview(titleLabel)
-        titleLabel.snp_makeConstraints { (make) in
+        titleLabel.snp.makeConstraints { (make) in
             make.top.equalTo(superview).offset(8)
             make.left.equalTo(superview).offset(8)
             make.right.equalTo(superview).offset(-8)
         }
         
-        dateLabel.font = UIFont.systemFontOfSize(12)
-        dateLabel.textColor = UIColor.grayColor()
+        dateLabel.font = UIFont.systemFont(ofSize: 12)
+        dateLabel.textColor = UIColor.gray
         dateLabel.setContentHuggingPriority(UILayoutPriorityRequired,
-                                               forAxis: UILayoutConstraintAxis.Vertical)
+                                               for: UILayoutConstraintAxis.vertical)
         superview.addSubview(dateLabel)
-        dateLabel.snp_makeConstraints { (make) in
-            make.top.equalTo(titleLabel.snp_bottom).offset(8)
+        dateLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(titleLabel.snp.bottom).offset(8)
             make.right.equalTo(superview).offset(-8)
         }
         
-        picImageView.contentMode = UIViewContentMode.ScaleAspectFit
+        picImageView.contentMode = UIViewContentMode.scaleAspectFit
         picImageView.setContentHuggingPriority(UILayoutPriorityDefaultLow,
-                                               forAxis: UILayoutConstraintAxis.Vertical)
+                                               for: UILayoutConstraintAxis.vertical)
         superview.addSubview(picImageView)
-        picImageView.snp_makeConstraints { (make) in
+        picImageView.snp.makeConstraints { (make) in
             make.bottom.equalTo(superview).offset(-24)
             make.left.equalTo(superview)
             make.right.equalTo(superview)
-            make.top.equalTo(dateLabel.snp_bottom).offset(8)
+            make.top.equalTo(dateLabel.snp.bottom).offset(8)
         }
         
-        self.textLabel?.hidden = true
+        self.textLabel?.isHidden = true
     }
 }
